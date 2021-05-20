@@ -1,0 +1,39 @@
+{
+  "name": "climendo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node dist/index.js",
+    "build": "babel src --out-dir dist",
+    "start:dev": "nodemon --exec babel-node src/index.js",
+    "test": " cross-env NODE_ENV=test jest  --verbose --detectOpenHandles --forceExit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "babel-jest": "^25.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "helmet": "^3.21.3",
+    "jest": "^25.1.0",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.5",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
