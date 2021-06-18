@@ -8,17 +8,15 @@ https://documenter.getpostman.com/view/5376766/TzeXmTQw
 ### Key Features
 
 
-- preview all departments
-- preview a single department
-- create a new department
-- update a department
-- delete a department
-- search through the departments
-- add a few more custom fields to every department.
+- Get all keys
+- Get a Key
+- Delete all keys
+- Delete a Key
+- Create/Update a Key
 
 ## Tech Stack
 
-Node.js, Express framework, MongoDB with Mongoose ORM, Bcrypt, Jest, Supertest, Babel
+Node.js, Express framework, MongoDB with Mongoose ORM, Jest, Supertest, Babel
 
 ## Getting started
 
