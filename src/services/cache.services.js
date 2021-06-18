@@ -80,8 +80,11 @@ class CacheService {
   static resizeCache({ key, value }) {
     return new Promise(async (resolve, reject) => {
       try {
+        //   find the oldest item in the cache
         const oldestItem = await Query().cache.getOldestCache();
+        // update with the new item
         merge(oldestItem, { key, value });
+        // save
         oldestItem.save();
         return resolve(oldestItem);
       } catch (error) {
@@ -93,8 +96,10 @@ class CacheService {
   static addCache({ key, value }) {
     return new Promise(async (resolve, reject) => {
       try {
+        // get the total item in the cache
         const cacheSize = await Query().cache.getCacheSize();
         const cacheLimit = process.env.CACHE_LIMIT || 100;
+        // check if the limit of the cache is reached and update the oldest Item
         if (cacheSize >= cacheLimit) {
           const resize = await CacheService.resizeCache({ key, value });
           return resolve(resize);
