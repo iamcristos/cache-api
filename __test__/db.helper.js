@@ -10,24 +10,28 @@ class DbtestHelper {
 
   static async cleanDB() {
     // drop all database;
-    const promiseArray = [model.Department.deleteMany({}),
-      model.ContactPerson.deleteMany({})];
-    const cleandb = await Promise.all(promiseArray);
+    const cleandb = await model.Cache.deleteMany({});
     return cleandb;
   }
 
-  static async createDepartment() {
+  static async createKey() {
     const body = {
-      name: 'vincent',
-      apiKey: 'dhhdsdhddBSCUDSIDSOODJDJJ',
-      something: 'test',
+      key: 'testKey',
+      value: '{name: faith, age: 1}',
     };
-    const department = await model.Department.create(body);
-    return department;
+    const cacheKey = await model.Cache.create(body);
+    return cacheKey;
   }
 
   static disconnectDb() {
     return mongoose.disconnect();
+  }
+
+  static payload() {
+    return {
+      key: 'testKey',
+      value: '{name: faith, age: 1}',
+    };
   }
 }
 
