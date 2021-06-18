@@ -1,10 +1,8 @@
 import model from '../model';
-import ContactPerson from './contactPerson.query';
-import DepartmentQuery from './department.query';
+import CacheQuery from './cache.query';
 
 const Query = () => ({
-  department: new DepartmentQuery(model.Department),
-  contactPerson: new ContactPerson(model.ContactPerson),
+  cache: new CacheQuery(model.Cache),
 });
 
 export default Query;
