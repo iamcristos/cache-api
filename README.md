@@ -1,9 +1,9 @@
 
-# Climendo
+# Fashion cloud
 
 ## Endpoints
 
-https://documenter.getpostman.com/view/5376766/TzRa7QCy
+https://documenter.getpostman.com/view/5376766/TzeXmTQw
 
 ### Key Features
 

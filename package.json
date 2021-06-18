@@ -21,10 +21,12 @@
     "express-validator": "^6.4.0",
     "helmet": "^3.21.3",
     "jest": "^25.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
     "mongoose": "^5.9.5",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
+    "pino": "^6.11.3",
     "supertest": "^4.0.2"
   },
   "devDependencies": {
