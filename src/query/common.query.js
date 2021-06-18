@@ -39,8 +39,12 @@ class CommonQuery {
     return this.model.findOneAndUpdate(condition, { $set: update }, { new: true });
   }
 
-  removeDoc(id) {
-    return this.model.findByIdAndRemove(id);
+  removeDoc(condition) {
+    return this.model.findOneAndDelete(condition);
+  }
+
+  deleteAllDoc() {
+    return this.model.deleteMany();
   }
 }
 

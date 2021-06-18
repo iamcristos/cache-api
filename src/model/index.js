@@ -1,9 +1,7 @@
-import ContactPerson from './contactPerson.model';
-import Department from './department.model';
+import Cache from './cache.model';
 
 const model = {
-  ContactPerson,
-  Department,
+  Cache,
 };
 
 export default model;
