@@ -1,5 +1,5 @@
 import { validationResult } from 'express-validator';
-import DepartmentValidation from './department.validation';
+import CacheValidation from './cache.validation';
 import { UNPROCESSED_ENTITY } from '../util/httpStatusCode';
 
 function validate(req, res, next) {
@@ -16,7 +16,7 @@ function validate(req, res, next) {
 }
 
 const validation = {
-  validate, DepartmentValidation,
+  validate, CacheValidation,
 };
 
 export default validation;
